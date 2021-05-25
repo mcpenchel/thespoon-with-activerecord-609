@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Restaurant.count # => Returns the number of rows in the restaurants table
 
-Things you may want to cover:
+# Restaurant.find(1) # => Returns the restaurant with id 1 (or raises EXCEPTION if not found)
+# Restaurant.all # => returns an "array" of all the restaurants
 
-* Ruby version
+# Restaurant.where(address: "Botafogo") # => Returns an "array" of restaurants
+# Restaurant.find_by(address: "Botafogo") # => Returns the FIRST restaurant found for that criteria
 
-* System dependencies
 
-* Configuration
+# vegan = Restaurant.new(name: "Vegan Vegan", rating: 10, address: "Botafogo")
+# vegan.save
 
-* Database creation
+# Restaurant.create(name: "McDonalds", rating: 5, address: "Botafogo")
 
-* Database initialization
+# vegan.rating = 9
+# vegan.save
 
-* How to run the test suite
+# vegan.update(name: "Super Vegan Vegan", rating: 10)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# vegan.destroy
